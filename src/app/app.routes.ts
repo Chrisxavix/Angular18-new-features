@@ -35,7 +35,7 @@ export const routes: Routes = [
       {
         path: "user-list",
         title: "User List",
-        loadComponent: () => import("./dashboard/pages/user/user.component")
+        loadComponent: () => import("./dashboard/pages/users/users.component")
       },
       {
         path: "view-transition-1",

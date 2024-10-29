@@ -1,1 +1,11 @@
-<p>users works!</p>
+<app-title titleGeneral="Lista de Usuarios"></app-title>
+<hr>
+@for (item of this.userService.users(); track item; let i = $index) {
+  <li class="flex items-center my-2 cursor-pointer">
+    <img [srcset]="item.avatar" alt="" class="rounded w-14">
+    <a [routerLink]="['/dashboard/user', item.id]" class="mx-5 hover:underline">{{ item.first_name }} {{ item.last_name }}</a>
+  </li>
+} @empty {
+  <div>Buscando información</div>
+}
+
